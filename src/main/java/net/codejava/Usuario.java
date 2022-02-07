@@ -9,7 +9,6 @@ package net.codejava;
  *
  * @author jose.jimenez07
  */
-
 public class Usuario {
 
     private String idusuario;
@@ -23,7 +22,6 @@ public class Usuario {
         this.idusuario = idusuario;
     }
 
-
     public String getPassword() {
         return password;
     }
@@ -31,6 +29,5 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    
+
 }

@@ -7,64 +7,65 @@ import javax.persistence.Id;
 
 @Entity
 public class Product {
-	private Long id;
-	private String name;
-	private String brand;
-	private String madein;
-	private float price;
 
-	public Product() {
-	}
+    private Long id;
+    private String name;
+    private String brand;
+    private String madein;
+    private float price;
 
-	protected Product(Long id, String name, String brand, String madein, float price) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.brand = brand;
-		this.madein = madein;
-		this.price = price;
-	}
+    public Product() {
+    }
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long getId() {
-		return id;
-	}
+    protected Product(Long id, String name, String brand, String madein, float price) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.brand = brand;
+        this.madein = madein;
+        this.price = price;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long getId() {
+        return id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getBrand() {
-		return brand;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
+    public String getBrand() {
+        return brand;
+    }
 
-	public String getMadein() {
-		return madein;
-	}
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
 
-	public void setMadein(String madein) {
-		this.madein = madein;
-	}
+    public String getMadein() {
+        return madein;
+    }
 
-	public float getPrice() {
-		return price;
-	}
+    public void setMadein(String madein) {
+        this.madein = madein;
+    }
 
-	public void setPrice(float price) {
-		this.price = price;
-	}
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
 
 }
