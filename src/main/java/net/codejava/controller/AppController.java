@@ -7,7 +7,9 @@ import javax.servlet.http.HttpSession;
 import net.codejava.services.ProductService;
 import net.codejava.Usuario;
 import net.codejava.entity.Formulario;
+import net.codejava.entity.Imc;
 import net.codejava.entity.Product;
+import net.codejava.services.ImcService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,8 @@ public class AppController {
 
     @Autowired
     private ProductService service;
+    @Autowired
+    private ImcService imcService;
 
     @RequestMapping("/")
     public String viewHomePage(HttpSession session, Model model) {
@@ -57,7 +61,12 @@ public class AppController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String saveProduct(@ModelAttribute("product") Product product) {
         service.save(product);
-
+        Imc imc = new Imc();
+        imc.setId(1);
+        imc.setNombrePersona("Alfredo");
+        imc.setAltura(1.80);
+        imc.setPeso(87d);
+        imcService.save(imc);
         return "redirect:/";
     }
 
