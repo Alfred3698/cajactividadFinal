@@ -1,11 +1,9 @@
 package net.codejava.controller;
 
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import net.codejava.services.ProductService;
-import net.codejava.Usuario;
 import net.codejava.entity.Formulario;
 import net.codejava.entity.Imc;
 import net.codejava.entity.Product;
@@ -43,9 +41,9 @@ public class AppController {
     }
 
     @RequestMapping("/login")
-    public String login(HttpSession session) {
+    public String login(HttpSession session) 
+    {
         session.setAttribute("mySessionAttribute", "sasas");
-
         // model.addAttribute("listProducts", listProducts);
         return "redirect:/";
     }
